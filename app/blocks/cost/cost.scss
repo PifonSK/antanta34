@@ -1,0 +1,302 @@
+.page__cost {
+	margin-top: 150px;
+}
+
+.cost {
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+	}
+	
+	&__left {
+		width: 600px;
+		margin-bottom: 100px;
+    	display: flex;
+    	position: relative;
+		flex-direction: column;
+  }
+    
+  &__right {
+		display: flex;
+		flex-direction: column;
+		width: 475px;
+
+    &_row {
+      display: flex;
+      justify-content: left;
+    }
+  }
+	
+	textarea {
+		&::placeholder {
+			text-align: left;
+			font-family: 'Museo Sans Cyrl';
+			font-style: normal;
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	.input.input {
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 22px;
+		color: #FFFFFF;
+		text-align: left;
+		border: none;
+	}
+
+	.form {
+		
+		&-group {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 50px;
+
+			&__label {
+				opacity: 1;
+				font-size: 20px;
+				line-height: 24px;
+				margin-bottom: 20px;
+			}
+		}
+		
+		&-radio {
+			margin-bottom: 15px;
+			margin-right: 20px;
+
+			input {
+			display: none;
+			&:checked+span {
+				color: #13A0D8;
+				opacity: 1;
+				&:before {
+					opacity: 1;
+					background: #13A0D8;
+					box-shadow: 0px 0px 10px rgba(19, 160, 216, 0.5);
+				}					
+			}
+		}
+
+			&__dot {
+				line-height: 22px;
+				opacity: 0.6;
+				display: flex;
+
+				&:before {
+					content: '';
+					width: 20px;
+					height: 20px;
+					margin-right: 10px;
+					background: #FFFFFF;
+					opacity: 0.39;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+
+	.input {
+		&.-cost_text {
+			padding: 40px 30px;
+			margin-bottom: 50px;
+			height: 250px;
+			border: 1px solid #ffffff41;
+			border-radius: 0;
+			background: none;
+			resize: none;
+		}
+
+		&__file {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			display: flex;
+			align-items: flex-start;
+			display: none;
+
+			&-icon-wrapper {
+				height: 20px;
+				width: 20px;
+				margin-top: 15px;
+				margin-right: 10px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			&-button {
+				position: relative;
+				display: flex;
+				cursor: pointer;
+
+				&:after {
+					position: absolute;
+					cursor: text;
+					font-weight: 300;
+					top: 15px;
+					right: -220px;
+					content: 'Размер файла до 10 Мб';
+					font-size: 16px;
+					line-height: 19px;
+					opacity: 0.3;
+				}
+				
+				&-text {
+					line-height: 24px;
+					margin-top: 10px;
+					font-size: 20px;
+					color: #13A0D8;
+					//width: 200px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					border-bottom: 1px dashed #13A0D8;	
+				}
+			}	
+		}
+	}
+
+	&__btn {
+		position: relative;
+		width: 417px;
+		padding-left: 75px;
+
+		&:after {
+      		content: '';
+      		position: absolute;
+      		width: 48px;
+			height: 16px;
+			right: 85px;
+      		background-image: url('/images/cost-arrow.png');
+		}
+		
+		&:before {
+			position: absolute;
+			cursor: text;
+			font-weight: 300;
+			top: 29px;
+			right: -185px;
+			content: 'Шаг 1/2';
+			font-size: 20px;
+			line-height: 24px;
+			opacity: 0.3;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.page__cost {
+		margin-top: 100px;
+	}
+
+	.cost {
+
+		h2 {
+			margin-bottom: 25px;
+		}
+
+		&__wrapper {
+			flex-direction: column;
+		}
+
+		&__row {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__left {
+			width: 100%;
+			margin-bottom: 0;
+		}
+
+		&__right {
+			width: 100%;
+		}
+
+		p._sub {
+			padding-left: 17px;
+			margin: 0 0 36px 30px;
+		}
+
+		.form {
+		
+			&-group {
+				flex-direction: column;
+	
+				&__label {
+					margin-bottom: 30px;
+					font-size: 16px;
+					line-height: 19px;
+				}
+			}
+
+			&-radio {
+				font-size: 16px;
+			}
+		}
+
+		.input {
+			&.-cost_text {
+				padding: 25px 30px 25px 15px;
+				margin-bottom: 30px;
+				height: 170px;
+			}
+
+			&__file {
+	
+				&-button {
+					position: relative;
+					display: flex;
+					cursor: pointer;
+	
+					&:after {
+						top: 22px;
+						right: 0;
+						font-size: 10px;
+						line-height: 12px;
+					}
+					
+					&-text {
+						font-size: 16px;
+						line-height: 19px;
+						margin-top: 15px;
+					}
+				}	
+			}
+		}
+
+		&__btn {
+			width: 100%;
+			padding: 0 50px 0 0;
+	
+			&:after {
+				width: 48px;
+				height: 16px;
+				top: 20px;
+				right: 45px;
+			}
+			
+			&:before {
+				top: 75px;
+				right: 120px;
+				font-size: 16px;
+				line-height: 19px;
+			}
+		}
+		
+		.input.input {
+			font-size: 14px;
+			line-height: 17px;
+		}
+
+		textarea {
+			&::placeholder {
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+	}	
+}

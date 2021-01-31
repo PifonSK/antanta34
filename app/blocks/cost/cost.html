@@ -1,0 +1,50 @@
+<section class="cost page__cost">
+	<div class="container">
+		<h2>Получите стоимость<br/> решения вашей проблемы</h2>
+		<form class="cost__wrapper" id="cost-main">
+			<div class="cost__left">
+				<label for="message" class="form-group__label">Кратко опишите вашу ситуацию</label>
+				<textarea type="tel" name="message" class="input -cost_text" placeholder="Например: ООО ”СТРОЙСЕРВИС”. Необходимо сопровождение сделки на строительство газопровода"></textarea>
+				<div class="error"></div>
+				<button type="button" class="btn cost__btn desktop-flex" onclick="openMenu('.cost-modal')">Следующий шаг</button>
+			</div>
+      		<div class="cost__right">
+				<div class="form-group">
+					<div class="form-group__label">Как вам удобнее получить стоимость?</div>
+					<label for="free-1" class="form-radio">
+						<input checked type="radio" id="free-1" name="first" value="Позвоните мне">
+						<span class="form-radio__dot">Позвоните мне</span>
+					</label>
+					<label for="free-2" class="form-radio">
+						<input type="radio" id="free-2" name="first" value="Напишите на WhatsApp">
+						<span class="form-radio__dot">Напишите на WhatsApp</span>
+					</label>
+					<label for="free-3" class="form-radio">
+						<input type="radio" id="free-3" name="first" value="Пришлите на e-mail">
+						<span class="form-radio__dot">Пришлите на e-mail</span>
+					</label>
+				</div>
+				<div class="form-group">
+					<div class="form-group__label">Хотите ли вы получить план действий<br/> для решения проблемы</div>
+					<label for="free-4" class="form-radio">
+						<input checked type="radio" id="free-4" name="second" value="Да. Мне нужно">
+						<span class="form-radio__dot">Да. Мне нужно</span>
+					</label>
+					<label for="free-5" class="form-radio">
+						<input type="radio" id="free-5" name="second" value="Нет. Не надо">
+						<span class="form-radio__dot">Нет. Не надо</span>
+					</label>
+				</div>
+				<div class="form-group">
+					<div class="form-group__label">Если у вас документы или сканы заявлений,<br/> то прикрепите их к заявке</div>
+					<input id="input__file" name="file" type="file" name="file" class="input input__file" multiple>
+					<label for="input__file" class="input__file-button">
+						<span class="input__file-icon-wrapper"><img class="input__file-icon" src="./images/cost-clip.svg" alt="Выбрать файл" width="25"></span>
+						<span class="input__file-button-text">Прикрепите файл</span>
+					</label>
+				</div>
+				<button type="button" class="btn cost__btn mobile" onclick="openMenu('.cost-modal')">Следующий шаг</button>
+			</div>
+		</form>
+	</div>
+</section>

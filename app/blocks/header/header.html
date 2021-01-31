@@ -1,0 +1,126 @@
+<section class="header">
+    <div class="header__container">
+        <div class="header__top">
+			<div class="header__top-wrapper">
+				<a href="#contacts-block" class="header__top-address">
+					<div class="header__top-address-town">г. Волгоград</div>
+					<div class="header__top-address-street">
+						ул. Ессентукская, 11
+					</div>
+				</a>
+				<a href="/" class="quiz-index__top-logo">
+					<div class="quiz-index__top-logo-a">A</div>
+					<div class="quiz-index__top-logo-text">Антанта Профи</div>
+				</a>
+				<div class="header__top-phones">
+					<a href="tel:+7 (8442) 52-72-70" class="header__top-phones-main">
+						+7 (8442) 52-72-70
+					</a>
+					<div class="header__top-phones-popup">
+						<a href="tel:+7 (8442) 52-72-70" class="header__top-phones-item">
+							+7 (8442) 52-72-70
+						</a>
+						<a href="tel:+7 (904) 755-54-54" class="header__top-phones-item" >
+							+7 (904) 755-54-54
+						</a>
+					</div>
+				</div>
+				<div class="header__top-menu-toggler" onclick="openMenu('.menu-modal')"></div>
+			</div>
+		</div>
+		<div class="header__wrapper">
+			<div class="header__slider desktop">
+				<div class="header__slider-wrapper">
+					<div class="header__slider-item _active" index="1">
+						<div class="header__slider-item-text">
+							<div class="header__slider-item-name">Жамиля Шлятхина</div>
+							<div class="header__slider-item-type">Руководитель компании</div>
+						</div>
+						<div class="header__slider-item-img">
+							<img src="/images/header-swiper-2.png">
+						</div>
+					</div>
+					<div class="header__slider-item" index="2">
+						<div class="header__slider-item-text">
+							<div class="header__slider-item-name">Евгений Фролов</div>
+							<div class="header__slider-item-type">Руководитель юр. отдела</div>
+						</div>
+						<div class="header__slider-item-img">
+							<img src="/images/header-swiper-1.png">
+						</div>
+					</div>
+				</div>
+				<div class="header__slider-arrows">
+					<div class="header__slider-left" onclick="nextSlide()"></div>
+					<div class="header__slider-right" onclick="nextSlide()"></div>
+				</div>
+			</div>
+			<div class="header__right">
+				<h1 class="header__title">
+					<span>Встанем на<br> защиту</span> ваших<br> прав и интересов
+				</h1>
+				<div class="header__subtitle">
+					Юридическая и бухгалтерская помощь вам<br class="mobile"> и вашему<br class="desktop">
+					бизнесу с профессиональным подходом и полным<br class="desktop">
+					погружением в проблему
+				</div>
+				<button class="btn header__btn" onclick="openMenu('.consultation-modal', 'Консультация юриста', 'ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ', 'menu__main-right-g.png', 'Жамиля Шлятхина')">
+					<svg width="7" height="7" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" class="svg-inline--fa fa-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+					  	<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+					</svg>
+					получить консультацию
+					<svg width="7" height="7" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" class="svg-inline--fa fa-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+					  	<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+					</svg>
+				</button>
+				<div class="header__bottom">
+					<div class="header__bottom-item">
+						<div class="header__bottom-item-title">500+</div>
+						<div class="header__bottom-item-desc">Выигранных дел<br> в разных областях</div>
+					</div>
+					<div class="header__bottom-item">
+						<div class="header__bottom-item-title">11+</div>
+						<div class="header__bottom-item-desc">Лет юридической<br> практики</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-container header__slider-mobile mobile">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide header__slider-mobile-item">
+						<div class="header__slider-mobile-item-text">
+							<div class="header__slider-mobile-item-name">Жамиля Шлятхина</div>
+							<div class="header__slider-mobile-item-type">Руководитель компании</div>
+						</div>
+						<div class="header__slider-mobile-item-img">
+							<img src="/images/header-swiper-2-m.png" width="184">
+						</div>
+					</div>
+					<div class="swiper-slide header__slider-mobile-item _active">
+						<div class="header__slider-mobile-item-text">
+							<div class="header__slider-mobile-item-name">Евгений Фролов</div>
+							<div class="header__slider-mobile-item-type">Руководитель юр.<br/> отдела</div>
+						</div>
+						<div class="header__slider-mobile-item-img">
+							<img src="/images/header-swiper-1-m.png" width="245">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header__name">
+			Юридическая компания
+		</div>
+		<div class="header__pagination">
+			<div class="header__pagination-item _active" index="header"></div>
+			<div class="header__pagination-item" index="about"></div>
+			<div class="header__pagination-item" index="competence"></div>
+			<div class="header__pagination-item" index="maintenance"></div>
+			<div class="header__pagination-item" index="advantages"></div>
+			<div class="header__pagination-item" index="sertificates"></div>
+			<div class="header__pagination-item" index="projects"></div>
+			<div class="header__pagination-item" index="cost"></div>
+			<div class="header__pagination-item" index="questions"></div>
+			<div class="header__pagination-item" index="contacts"></div>
+		</div>
+    </div>
+</section>

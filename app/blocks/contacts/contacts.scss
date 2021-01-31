@@ -1,0 +1,176 @@
+.contacts {
+	border-bottom: 1px solid #ffffff18;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 60px;
+		padding-bottom: 150px;
+	}
+		
+	&__left {
+		width: 490px;
+		position: relative;
+
+		&_row {
+			margin-top: 95px;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
+		}
+	}
+
+	&__photo {
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		margin-right: 27px;
+
+		&:hover .contacts__photo_pattern {
+			visibility: visible;
+			opacity: 1;
+			transition: all 0.2s linear;
+		}
+
+		&_miniature {
+			height: 162px;
+			position: relative;
+		}
+
+		&_pattern {
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			padding-top: 30px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			top: 0;
+			background: rgba(0,0,0, 0.7);
+			visibility: hidden;
+			opacity: 0;
+
+			img {
+				width: 60px;
+				height: 60px;
+				margin-bottom: 10px;
+				border-radius: 50%;
+				box-shadow: 0px 0px 15px rgba(19, 160, 216, 0.8);
+			}
+
+			p {
+				opacity: 1;
+				font-weight: 400;
+				color: #ffffff;
+				font-size: 14px;
+				line-height: 150%;
+				text-align: center;
+				text-transform: uppercase;
+			}
+		}
+
+		&_title {
+			margin-bottom: 15px;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+	
+	&__block {
+		border-left: 2px solid #ffffff;
+		padding-left: 50px;
+
+		&_paragraph {
+			color: #ffffff;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 19px;
+			margin-bottom: 35px;
+
+			a {
+				color: #ffffff;
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 19px;	
+			}
+
+			span {
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 22px;
+			}
+		}
+	}
+
+	&__right {
+		z-index: 2;
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		padding-top: 84px;
+	}
+}
+
+@media (max-width: 800px) {
+	.contacts {
+		h2 {
+			margin-bottom: 40px;
+		}
+
+		&__row {
+			display: flex;
+			flex-direction: column;
+			padding-top: 100px;
+			padding-bottom: 80px;
+		}
+
+		&__left {
+			width: 100%;
+
+			&_row {
+				padding: 0;
+			}
+		}
+
+		&__right {
+			width: 100%;
+		}
+
+		p._sub {
+			padding-left: 17px;
+			margin: 0 0 36px 30px;
+		}
+
+		a {
+			font-size: 16px;
+
+			img {
+				width: 152px;
+				margin-top: 10px;
+			}
+		}
+
+		&__photo {
+			margin-right: 20px;
+	
+			&_miniature {
+				position: relative;
+
+				img {
+					height: 118px;
+				}
+			}
+
+			&_title {
+				margin-bottom: 0;
+			}
+
+			&_pattern {
+				display: none;
+			}
+		}	
+	}	
+}

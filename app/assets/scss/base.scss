@@ -1,0 +1,415 @@
+html {
+	color: #ffffff;
+	line-height: 150%;
+	font-family: 'Museo Sans Cyrl';
+	font-size: 18px;
+	background-color: #FFFFFF;
+}
+
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-width: 1600px;
+	background-color: #02110E;
+
+	&._not-scroll {
+		overflow-y: hidden;
+	}
+}
+
+a {
+	color: #13A0D8;
+	text-decoration: none;
+}
+
+h2 {
+	margin: 0 0 30px;
+	font-family: 'Berlingske Serif';
+	font-size: 45px;
+	line-height: 130%;
+	font-weight: 500;
+}
+
+p {
+	margin: 0 0 30px;
+	font-weight: 300;
+	opacity: 0.6;
+	&._sub {
+		position: relative;
+		opacity: 1;
+		padding-left: 25px;
+		&:before {
+			display: block;
+			height: 70%;
+			top: 15%;
+			margin-left: -25px;
+			content: '';
+			position: absolute;
+			border-left: 2px solid #13A0D8;
+		}
+	}
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.btn {
+	background: #13A0D8;
+	border: 1px solid #13A0D8;
+	box-shadow: 0px 0px 10px rgba(19, 160, 216, 0.4);
+	text-transform: uppercase;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-weight: 600;
+	padding: 0 40px;
+	height: 85px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	font-family: 'Museo Sans Cyrl';
+	display: flex;
+	transition: background 0.3s;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 150%;
+	letter-spacing: 0.1em;
+
+	svg {
+		margin: 0 20px;
+		transition: margin 0.3s;
+		flex-shrink: 0;
+	}
+
+	&._blue {
+		background: #FFFFFF;
+		border: 2px solid #389BF8;
+		color: #389BF8;
+	}
+
+	&:hover:not(._white) {
+		box-shadow: none;
+		border-color: transparent;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #00B7FF;
+	}
+}
+
+.overlay {
+	z-index: 999;
+	display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5) no-repeat center;
+}
+
+.select-gray {
+	& + span {
+		background: #F0F0F0 !important;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row-reverse;
+		border-radius: 5px;
+		border: none !important;
+		color: #232730 !important;
+
+		.ui-selectmenu-text {
+			margin-right: 10px;
+		}
+
+		.ui-icon {
+			background: url('/images/arrow.svg') no-repeat center !important;
+		}
+	}
+
+	&._white + span {
+		background: #FFFFFF !important;
+		border: 2px solid rgba(0, 0, 0, 0.1) !important;
+	}
+}
+
+.ui-selectmenu-menu {
+	max-height: 300px;
+	overflow-y: auto;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+
+	&.gray {
+		.ui-widget-content {
+			border: none;
+		}
+	
+		.ui-menu-item-wrapper {
+			height: 50px;
+			display: flex;
+			align-items: center;
+			padding-left: 50px;
+			font-weight: 600;
+			font-size: 18px;
+			font-family: 'Proxima Nova';
+			height: 37px;
+		}
+	
+		.ui-state-active {
+			border-color: #389BF8;
+			background: #389BF8;	
+		}
+	}
+
+	&.table {
+		.ui-widget-content {
+			border: none;
+		}
+	
+		.ui-menu-item-wrapper {
+			height: 48px;
+			display: flex;
+			align-items: center;
+			padding-left: 20px;
+		}
+	
+		.ui-state-active {
+			border-color: #389BF8;
+			background: #389BF8;	
+		}
+	}
+}
+
+.wrapper {
+	display: flex;
+	width: 100%;
+
+	.item {
+		flex-grow: 1;
+
+		&:first-child {
+			flex-grow: 2;
+		}
+	}
+}
+
+.input.input {
+	background: #FFFFFF;
+	border-radius: 5px;
+	width: 100%;
+	height: 50px;
+	font-size: 14px;
+	padding: 12px 20px 13px;
+	color: #232730;
+	text-align: center;
+	border: none;
+	
+	&[name="phone"] {
+		background: #FFFFFF url('/images/flag.svg') no-repeat center left 40px;
+		background-size: 18px;
+	}
+
+	&[disabled] {
+		opacity: 0.5;
+	}
+
+	&.error-border {
+		border-color: #FF0A0A;
+	}
+}
+
+.page {
+	&__title {
+		font-size: 30px;
+		font-family: 'PT Serif';
+		text-align: center;
+		line-height: 150%;
+	}
+
+	&__subtitle {
+		font-size: 18px;
+		text-align: center;
+		margin-top: 15px;
+	}
+}
+
+.form-group {
+	&__label {
+		font-size: 14px;
+		margin-bottom: 10px;
+		display: block;
+		opacity: 0.7;
+	}
+
+	&__with-button {
+		display: flex;
+	}
+}
+
+.file {
+	.form-group__label {
+		background: #ECECEC;
+		border: 1px dashed rgba(34, 34, 34, 0.2);
+		border-radius: 5px;
+		height: 77px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 18px;
+		opacity: 1;
+		text-transform: initial;
+		margin-bottom: 20px;
+		cursor: pointer;
+	}
+
+	input {
+		display: none;
+	}
+}
+
+.form-desc {
+	opacity: 0.5;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 150%;
+}
+
+.mobile.mobile, .mobile-flex.mobile-flex {
+    display: none;
+}
+
+.desktop.desktop {
+	display: block;
+}
+
+.desktop-flex.desktop-flex {
+	display: flex;
+}
+
+.error-mail,
+.error {
+	color: #ff0000;
+}
+
+.ruble {
+	font-family: sans-serif;
+}
+
+@media (max-width: 1617px) {
+	body {
+		min-width: initial;
+		overflow-x: hidden;
+	}
+}
+
+@media (max-width: 1200px) {
+	body {
+		overflow-x: initial;
+	}
+}
+
+@media (max-width: 800px) {
+	body {
+		min-width: initial;
+	}
+
+	.error {
+		font-size: 14px;
+		line-height: 130%;
+	}
+
+	.container {
+		width: 320px;
+	}
+
+	.mobile.mobile {
+		display: block;
+	}
+
+	.mobile-flex.mobile-flex {
+		display: flex;
+	}
+
+	.desktop.desktop, .desktop-flex.desktop-flex {
+		display: none;
+	}
+
+	h2 {
+		font-size: 30px;
+		margin-bottom: 15px;
+	}
+
+	p {
+		font-size: 14px;
+
+		&._sub {
+			&:before {
+				margin-left: -17px;
+			}
+		}
+	}
+
+	br {
+		display: none;
+	}
+
+	.btn {
+		padding: 0 15px;
+		height: 60px;
+		display: flex;
+		font-size: 14px;
+
+		svg {
+			margin: 1px 7px;
+		}
+	
+	}
+
+	.form-group {
+		&__label {
+			font-size: 12px;
+		}
+	}
+
+	.input {
+		font-size: 12px;
+		height: 39px;
+	}
+
+	.select-gray + span {
+		font-size: 12px;
+		height: 39px;
+	}
+
+	.ui-selectmenu-menu {
+	
+		&.gray {
+			.ui-menu-item-wrapper {
+				height: 39px;
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+
+#cboxCurrent {
+	display: none !important;
+}
+
+#cboxPrevious {
+	background: url('../images/controls.png') no-repeat top left;
+}
+
+#cboxNext {
+    background: url('../images/controls.png') no-repeat top right;
+}
+
+#cboxClose {
+    background: url('../images/controls.png') no-repeat top center;
+}

@@ -1,0 +1,160 @@
+.about {
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+		
+	&__left {
+		width: 490px;
+		padding-top: 90px;
+	}
+
+	p._sub {
+		margin: 50px 35px 40px 25px;
+		font-style: italic;
+	}
+
+	&__signature {
+		position: relative;
+		margin-left: 165px;
+		font-family: 'Berlingske Serif';
+		font-style: italic;
+
+		&:after {
+			content: "";
+			position: absolute;
+			width: 101px;
+			height: 106px;
+			margin-top: -70px;
+			margin-left: 210px;
+			background-image: url('/images/signature.png');
+		}
+
+		&-name {
+			font-size: 22px;
+			color: #13A0D8;
+		}
+
+		&-rank {
+		position: relative;
+		font-size: 16px;
+		line-height: 150%;
+		
+			&:before {
+				display: block;
+				width: 20px;
+				content: '';
+				position: absolute;
+				border-bottom: 1px solid #ffffff;
+				top: 50%;
+				left: -30px;
+			}  
+		}
+	}
+
+	&__btn {
+		cursor: pointer;
+		position: absolute;
+		top: 645px;
+		left: 140px;
+		width: 115px;
+		height: 115px;
+		background-image: url('/images/play.png');
+
+		&_description {
+		position: absolute;
+		width: 140px;
+		top: 670px;
+		font-size: 14px;
+		line-height: 150%;
+		}
+	}
+
+	&__right {
+		display: flex;
+		position: relative;
+			flex-direction: column;
+	}
+
+	&__frolov {
+		width: 942px;
+		height: 826px;
+		background-size: contain;
+		margin-right: -175px;
+		margin-left: -100px;
+		background-image: url('/images/frolov.png');
+	}
+}
+
+@media (max-width: 800px) {
+	
+	.about {
+
+		&__row {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__left {
+			width: 100%;
+		}
+
+		&__right {
+			width: 100%;
+			overflow: hidden;
+		}
+
+		p._sub {
+			padding-left: 17px;
+			margin: 0 0 36px 30px;
+		}
+
+		&__signature {
+			margin-left: 48px;
+
+			&:after {
+				width: 74px;
+				height: 78px;
+				background-size: contain;
+				margin-left: 195px;
+				background-image: url('/images/signature-m.png');
+			}
+
+			&-name {
+				font-size: 16px;
+			}
+			
+			&-rank {
+				font-size: 12px;
+				margin-left: 30px;
+			}
+		}
+		
+		&__frolov {
+			width: 100%;
+			height: 380px;
+			margin: 0;
+			background-repeat: no-repeat;
+			background-image: url('/images/frolov-m.png');
+		}
+
+		&__btn {
+			top: 200px;
+			left: 97px;
+			width: 120px;
+			height: 120px;
+			background-size: contain;
+			background-image: url('/images/play-m.png');
+			filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
+	
+			&_description {
+			width: 140px;
+			top: 315px;
+			left: 85px;
+			text-align: center;
+			color: #13A0D8;		
+			}
+		}
+	}	
+}

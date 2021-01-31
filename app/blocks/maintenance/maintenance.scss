@@ -1,0 +1,122 @@
+.maintenance {
+
+	&__row{
+		display: flex;
+		justify-content: space-between;
+	}
+		
+	&__right {
+		padding-top: 120px;
+		margin-left: -45px;
+
+		&_row.desktop.desktop{
+			display: flex;
+			justify-content: left;
+		}
+	}
+
+	p._sub {
+		margin-bottom: 20px;
+		padding-right: 30px;
+		font-style: italic;
+	}
+
+	&__left {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+	}
+
+	&__btn {
+		cursor: pointer;
+		position: absolute;
+		top: 540px;
+		left: 45px;
+		width: 115px;
+		height: 115px;
+		background-image: url('/images/play.png');
+
+		&_description {
+			position: absolute;
+			width: 140px;
+			top: 563px;
+			left: 180px;
+			font-size: 14px;
+			line-height: 150%;
+			color: #13A0D8;
+		}
+	}
+
+	&__shlyakhtina {
+		width: 817px;
+		height: 711px;
+		background-size: contain;
+		margin-left: -155px;
+		background-image: url('/images/shlyakhtina.png');
+	}
+}
+
+.btn_maintenance {
+  	margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+	.maintenance {
+
+		&__row {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__left {
+			order: 1;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		&__right {
+			order: 0;
+			padding-top: 30px;
+			margin: 0;
+			width: 100%;
+			
+			&_row {
+				margin-top: 130px;
+			}	
+		}
+
+		p._sub {
+			padding-left: 17px;
+			margin: 0 0 30px 0;
+		}
+		
+		&__shlyakhtina {
+			width: 100%;
+			height: 280px;
+			margin: 0;
+			background-image: url('/images/shlyakhtina-m.png');
+		}
+
+		&__btn {
+			top: 200px;
+			left: 102px;
+			width: 120px;
+			height: 120px;
+			background-size: contain;
+			background-image: url('/images/play-m.png');
+			filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
+	
+			&_description {
+			width: 140px;
+			top: 320px;
+			left: 90px;
+			text-align: center;
+			color: #13A0D8;		
+			}
+		}
+	}
+	
+	.btn_maintenance {
+		margin-top: 10px;
+	}
+}

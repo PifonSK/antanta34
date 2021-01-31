@@ -1,0 +1,259 @@
+.menu {
+	position: fixed;
+	top: 1000px;
+	margin: auto;
+	width: 100%;
+	z-index: 1000;
+	background-image: url('/images/menu-bg.jpg');
+	transition: top 0.3s;
+
+	&._open {
+		top: 0px;
+	}
+
+	.header__wrapper {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		bottom: 160px;
+	}
+
+	.header__name {
+		top: 485px;
+		position: absolute;
+		left: -165px;
+	}
+
+	&.send-modal {
+		.header__wrapper {
+			bottom: 0;
+		}
+	}
+
+	.send {
+		&__wrapper {
+			display: flex;
+			font-family: 'Berlingske Serif';
+			flex-direction: column;
+		}
+
+		&__title {
+			font-weight: 500;
+			font-size: 45px;
+			line-height: 130%;
+		}
+
+		&__desc {
+			line-height: 130%;
+			margin: 15px 0 -5px;
+		}
+	}
+
+	&__price {
+		font-family: 'Berlingske Serif';
+		text-align: center;
+		bottom: 55px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+
+		&-link {
+			text-decoration-line: underline;
+			color: #ffffff;
+		}
+
+		&-desc {
+			font-weight: 300;
+			font-size: 14px;
+			opacity: 0.6;
+		}
+	}
+
+	&__block {
+		&-item {
+			text-transform: uppercase;
+			font-family: 'Berlingske Serif';
+			font-weight: 500;
+			font-size: 30px;
+			letter-spacing: 0.1em;
+			opacity: 0.3;
+			margin-bottom: 10px;
+			line-height: 150%;
+			cursor: pointer;
+
+			&._active {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__main {
+		display: flex;
+		text-align: left;
+		align-items: center;
+
+		.quiz__last-answer-file-text {
+			color: #ffffff;
+			flex-shrink: 0;
+		}
+
+		.quiz__last-answer-file-btn {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: block;
+			padding-left: 25px;
+			background: url('/images/quiz-file-icon.svg') no-repeat left;
+
+			&:before {
+				content: none;
+			}
+		}
+
+		&-cost {
+			display: flex;
+			justify-content: space-between;
+			
+			.form-radio {
+				margin-right: 0;
+			}
+
+			.form-radio__dot {
+				&:before {
+					flex-shrink: 0;
+				}
+			}
+		}
+
+		&-btn {
+			margin: 25px 0 20px;
+			width: 100%;
+			justify-content: space-between;
+
+			svg {
+				margin: 0;
+			}
+		}
+
+		&-title {
+			font-family: 'Berlingske Serif';
+			font-weight: 500;
+			font-size: 45px;
+			line-height: 130%;
+		}
+
+		&-approve {
+			font-size: 14px;
+			line-height: 130%;
+			color: #FFFFFF;
+			opacity: 0.5;
+			display: flex;
+			align-items: center;
+
+			&:before {
+				content: '';
+				width: 23px;
+				height: 23px;
+				flex-shrink: 0;
+				margin-right: 16px;
+				background: url('/images/consultation-approve.svg') no-repeat center;
+			}
+		}
+
+		&-form {
+			width: 422px;
+		}
+
+		&-input {
+			width: 100%;
+			display: block;
+			background: none;
+			border: none;
+			margin-top: 5px;
+			padding: 20px 0 19px 50px;
+			font-family: 'Museo Sans Cyrl';
+			font-size: 16px;
+			color: #ffffff;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		
+			&::placeholder {
+				color: #777777;
+			}
+
+			&[name="name"] {
+				background: url('/images/consultation-name.svg') no-repeat left center;
+			}
+
+			&[name="phone"] {
+				background: url('/images/consultation-phone.svg') no-repeat left center;
+			}
+
+			&[name="mail"] {
+				background: url('/images/consultation-mail.svg') no-repeat left center;
+			}
+		}
+
+		textarea {
+			border: none;
+			resize: none;
+			background: none;
+			font-family: 'Museo Sans Cyrl';
+			font-size: 16px;
+			color: #ffffff;
+			padding: 25px 0 19px 0;
+			width: 100%;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+			&::placeholder {
+				color: #777777;
+			}
+		}
+
+		&-desc {
+			line-height: 130%;
+			margin: 10px 0 12px;
+		}
+
+		&-file {
+			&-text {
+				margin: 20px 0 15px;
+			}
+		}
+
+		&-right {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0 -100px 0 100px;
+
+			&-text {
+				font-family: 'Berlingske Serif';
+				font-style: italic;
+				margin-top: -40px;
+			}
+
+			&-name {
+				font-weight: 500;
+				font-size: 22px;
+				text-align: center;
+				color: #13A0D8;
+			}
+
+			&-call {
+				font-size: 16px;
+				display: flex;
+				align-items: center;
+
+				&:before {
+					content: '';
+					border-top: 1px solid #FFFFFF;
+					width: 21px;
+					margin-right: 9px;
+				}
+			}
+		}
+	}
+}
